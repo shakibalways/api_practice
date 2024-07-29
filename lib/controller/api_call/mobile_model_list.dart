@@ -26,7 +26,7 @@ class ApiService {
     if (response.statusCode == 200) {
       final List<dynamic> jsonList = json.decode(response.body);
       var data = jsonList.map((json) => PhoneItemModel.fromJson(json)).toList();
-      log("${data.runtimeType}");
+
       return data;
     } else {
       throw Exception('Failed to load phones');

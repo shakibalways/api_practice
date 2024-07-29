@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("API"),
+          title: const Text("API GET"),
           centerTitle: true,
         ),
         body: FutureBuilder<List<PhoneItemModel>>(
@@ -45,7 +45,6 @@ class _HomePageState extends State<HomePage> {
               return ListView.builder(
                   itemCount: data.length,
                   itemBuilder: (context, index) {
-                    log("${data[index].data.runtimeType}");
                     return Card(
                       child: Column(
                         children: [
